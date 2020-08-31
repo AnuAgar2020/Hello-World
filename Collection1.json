@@ -1,0 +1,381 @@
+{
+	"info": {
+		"_postman_id": "2f5f6748-e26b-4bc1-aa7c-e42ebec190bf",
+		"name": "Collection1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "GET User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "abccc165-b8f5-43ef-b79d-24a6b35d3fa4",
+								"exec": [
+									"console.log(\"Hello world...\");\r",
+									"\r",
+									"let urlvar=pm.variables.get(\"url\");\r",
+									"console.log(\"Value of URL\"+urlvar);\r",
+									"\r",
+									"pm.variables.set(\"Name\",\"Gaurav\");\r",
+									"console.log(pm.variables.get(\"Name\"));\r",
+									"\r",
+									"let globalVar = pm.globals.get(\"Env\");\r",
+									"console.log(globalVar);\r",
+									"\r",
+									"pm.environment.set(\"Env\",\"Testing\");\r",
+									"console.log(pm.environment.get(\"Env\"));\r",
+									" \r",
+									" let globalName= pm.globals.get(\"Name\");\r",
+									" console.log(globalName);\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "9743e47c-491b-4fc7-9998-8060976377c5",
+								"exec": [
+									"console.log(\"Hello world...\");\r",
+									"\r",
+									"let urlvar=pm.variables.get(\"url\");\r",
+									"console.log(\"Value of URL\"+urlvar);\r",
+									"\r",
+									"pm.variables.set(\"Name\",\"Gaurav\");\r",
+									"console.log(pm.variables.get(\"Name\"));\r",
+									"\r",
+									"let globalVar = pm.globals.get(\"Env\");\r",
+									"console.log(globalVar);\r",
+									"\r",
+									"pm.environment.set(\"Env\",\"Testing\");\r",
+									"console.log(pm.environment.get(\"Env\"));\r",
+									" \r",
+									" let globalName= pm.globals.get(\"Name\");\r",
+									" console.log(globalName);\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/users/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"2"
+							]
+						},
+						"description": "August 25th 2020"
+					},
+					"response": []
+				},
+				{
+					"name": "GETUserList",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "55e5b947-2d2c-4c71-a257-2215fa9f68ba",
+								"exec": [
+									"pm.test(\"Verify Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"\r",
+									"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {\r",
+									"    console.log(response.json());\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/users?page=2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ScriptsTest",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "66021600-2305-469f-95b2-3421ef298b12",
+								"exec": [
+									"pm.variables.get(\"variable_key\");\r",
+									"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {\r",
+									"    console.log(response.json());\r",
+									"});\r",
+									"pm.environment.set(\"variable_key\", \"variable_value\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "9bedd86c-f163-4c0d-b70d-91ad8e23f39e",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "406562d4-e36d-49a2-b33e-fda1ff309250",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "GET Copy",
+			"item": [
+				{
+					"name": "GET User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "03c6e810-7e74-42d1-893a-b873423740aa",
+								"exec": [
+									"console.log(\"Hello world...\");\r",
+									"\r",
+									"let urlvar=pm.variables.get(\"url\");\r",
+									"console.log(\"Value of URL\"+urlvar);\r",
+									"\r",
+									"pm.variables.set(\"Name\",\"Gaurav\");\r",
+									"console.log(pm.variables.get(\"Name\"));\r",
+									"\r",
+									"let globalVar = pm.globals.get(\"Env\");\r",
+									"console.log(globalVar);\r",
+									"\r",
+									"pm.environment.set(\"Env\",\"Testing\");\r",
+									"console.log(pm.environment.get(\"Env\"));\r",
+									" \r",
+									" let globalName= pm.globals.get(\"Name\");\r",
+									" console.log(globalName);\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "d60f18d1-880f-4230-a6ed-77a6c6f28693",
+								"exec": [
+									"console.log(\"Hello world...\");\r",
+									"\r",
+									"let urlvar=pm.variables.get(\"url\");\r",
+									"console.log(\"Value of URL\"+urlvar);\r",
+									"\r",
+									"pm.variables.set(\"Name\",\"Gaurav\");\r",
+									"console.log(pm.variables.get(\"Name\"));\r",
+									"\r",
+									"let globalVar = pm.globals.get(\"Env\");\r",
+									"console.log(globalVar);\r",
+									"\r",
+									"pm.environment.set(\"Env\",\"Testing\");\r",
+									"console.log(pm.environment.get(\"Env\"));\r",
+									" \r",
+									" let globalName= pm.globals.get(\"Name\");\r",
+									" console.log(globalName);\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/users/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"2"
+							]
+						},
+						"description": "August 25th 2020"
+					},
+					"response": []
+				},
+				{
+					"name": "GETUserList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://reqres.in/api/users?page=2",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "1e8b8c70-6402-4882-9457-1c68b54ebc0f",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "5374e2e0-638b-4a0d-a04e-fd247aecab41",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "User Registration",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"{{password}}\"\r\n}"
+						},
+						"url": {
+							"raw": "https://reqres.in/{{endpoint}}",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"{{endpoint}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "bc702cf9-a331-49fa-ab74-c57c7d1b66ee",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "ed7eb495-038d-4e45-9b3c-dadff0c91451",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "6ffdad05-9bad-4955-90a9-5e2554a17b75",
+			"key": "url",
+			"value": "https://reqres.in"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
