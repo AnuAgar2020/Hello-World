@@ -1,0 +1,17 @@
+[
+{
+   "endpoint" : "api/register/preprod",
+    "email"  : "eve.holt@reqres.in",
+     "password" : "pistol"
+
+},
+{
+     "endpoint" : "api/register/preprod",
+    "email"  : "anu@gmail.com",
+     "password" : "test1234"
+
+
+}
+
+
+]
